@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barber Shop</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.css"
+    />
+  </head>
+  <body>
+    <ul>
+      <li><a href="./partials/header.html"></a></li>
+      <li><a href="./partials/best-barber.html"></a></li>
+      <li><a href="./partials/services-and-prise.html"></a></li>
+      <li><a href="./partials/come-here.html"></a></li>
+      <li><a href="./partials/our-team.html"></a></li>
+      <li><a href="./partials/portfolio.html"></a></li>
+      <li><a href="./partials/footer.html"></a></li>
+    </ul>
+    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
+    <include src="./partials/example.html"></include>
+    <include src="./partials/header.html"></include>
+    <include src="./partials/best-barber.html"></include>
+    <include src="./partials/services-and-prise.html"></include>
+    <include src="./partials/come-here.html"></include>
+    <include src="./partials/our-team.html"></include>
+    <include src="./partials/portfolio.html"></include>
+    <include src="./partials/footer.html"></include>
+
+    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    <script src="./index.js"></script>
+  </body>
+</html>

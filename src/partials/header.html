@@ -1,0 +1,120 @@
+<!-- HEADER -->
+<div class="position-container">
+  <aside class="sidebar">
+    <a href="./index.html">
+      <svg class="sidebar-logo__inner">
+        <use href="./src/images/icons/symbol-defs.svg#icon-Logo"></use>
+      </svg>
+    </a>
+    <ul class="sidebar-menu__social">
+      <li class="sidebar-menu__instagram">
+        <a href="#">Instagram</a>
+      </li>
+      <li class="sidebar-menu__youtube">
+        <a href="#">Youtube</a>
+      </li>
+    </ul>
+  </aside>
+  <header class="header">
+    <div class="buttons">
+      <div class="btn-prev btn-arr">Назад</div>
+      <div class="btn-next btn-arr">Вперёд</div>
+    </div>
+    <section id="fader">
+      <img
+        srcset="
+          ./src/images/header-images/Slider1@2x.jpg 2x,
+          ./src/images/header-images/Slider1@3x.jpg 3x
+        "
+        src="./src/images/header-images/Slider1.jpg"
+        alt="Первая картинка"
+      />
+      <img
+        srcset="
+          ./src/images/header-images/Slider2@2x.jpg 2x,
+          ./src/images/header-images/Slider2@3x.jpg 3x
+        "
+        src="./src/images/header-images/Slider2.jpg"
+        alt="Вторая картинка"
+      />
+      <img
+        srcset="
+          ./src/images/header-images/Slider3@2x.jpg 2x,
+          ./src/images/header-images/Slider3@3x.jpg 3x
+        "
+        src="./src/images/header-images/Slider3.jpg"
+        alt="Третья картинка"
+      />
+    </section>
+    <section class="header-content">
+      <a href="./index.html">
+        <svg class="header-logo__inner">
+          <use href="./src/images/icons/symbol-defs.svg#icon-Logo"></use>
+        </svg>
+      </a>
+      <button class="burger-button" data-menu-button type="button">
+        <svg aria-label="Переключатель мобильного меню" class="burger__icon">
+          <use
+            class="burger__menu"
+            href="./src/images/icons/symbol-defs.svg#icon-menu_40px"
+          ></use>
+          <use
+            class="burger__close"
+            href="./src/images/icons/symbol-defs.svg#icon-close_40px"
+          ></use>
+        </svg>
+      </button>
+      <nav class="header-menu" data-menu>
+        <ul class="header-menu__list">
+          <li class="header-menu__item">
+            <a class="header-menu__link" href="#">О нас</a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link" href="#">Услуги и цены</a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link" href="#">Мастера</a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+        <ul class="header-menu__contacts">
+          <li class="header-menu__tel">
+            <a class="header-menu__phone" href="tel:+38 044 111 11 11"
+              ><span>+38 044 111 11 11</span></a
+            >
+          </li>
+          <li class="header-menu__button">
+            <button class="header-menu__click" type="button">
+              <span>Онлайн запись</span>
+            </button>
+          </li>
+        </ul>
+        <ul class="header-menu__social">
+          <li class="header-menu__instagram">
+            <a href="#">Instagram</a>
+          </li>
+          <li class="header-menu__youtube">
+            <a href="#">Youtube</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <div class="header-text-container">
+      <p class="header-paragraph">A hair salon for men in Kyiv</p>
+      <h1 class="header-title">BarberShop</h1>
+      <p class="header-subtitle">
+        Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со
+        вкусом.
+      </p>
+    </div>
+  </header>
+</div>
+<!-- END-HEADER -->
+<script src="./menu.js"></script>
+<script
+  type="text/javascript"
+  src="http://code.jquery.com/jquery-latest.min.js"
+></script>
+<script src="/jquery.js"></script>

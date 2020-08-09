@@ -1,0 +1,47 @@
+$main-color: #303030;
+$hover-color: #ff6c00;
+$little-text-color: #9da4bd;
+$white-color: #ffffff;
+$animation-duration: 0.3s ease-in;
+%font-raleway {
+  font-family: 'Raleway', sans-serif;
+}
+%font-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+%button-main {
+  border: 2px solid #ff6c00;
+  border-radius: 25px;
+  padding: 12px 20px;
+}
+%button-submit {
+  border: 2px solid #ff6c00;
+  border-radius: 25px;
+  padding: 12px 38px;
+}
+%social-elipse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  background-color: #ffffff;
+}
+%list-throw {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+%text-throw {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+%img-throw {
+  display: block;
+}
+%link-throw {
+  display: block;
+  text-decoration: none;
+}

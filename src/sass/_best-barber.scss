@@ -1,0 +1,159 @@
+.container {
+  padding: 84px 31px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+    display: flex;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding: 100px 39px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 1280px;
+
+    padding-top: 130px;
+
+    padding-bottom: 130px;
+  }
+}
+
+.best-barber {
+  &-about {
+    @extend %font-sans;
+    color: $main-color;
+    padding-left: 80px;
+    padding-bottom: 20px;
+
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 7px;
+      content: '';
+      width: 60px;
+      height: 1px;
+      border: 1px solid $main-color;
+      color: $main-color;
+    }
+  }
+
+  &-title {
+    @extend %font-raleway;
+    color: $main-color;
+    padding-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+
+    @media screen and (min-width: 1280px) {
+      font-size: 42px;
+      line-height: 1.16;
+    }
+  }
+
+  &-text {
+    @extend %font-sans;
+    color: #555555;
+    padding-bottom: 20px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.62;
+
+    @media screen and (min-width: 1280px) {
+      font-size: 18px;
+      line-height: 1.66;
+    }
+  }
+
+  &-paragraf {
+    @extend %font-sans;
+    color: #555555;
+    padding-bottom: 40px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.62;
+  }
+
+  &-button {
+    @extend %button-main;
+    background-color: $white-color;
+    transition: 0.3s ease-in;
+    cursor: url('../images/icons/finger.svg'), pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $hover-color;
+      color: $white-color;
+      transition: 0.3s ease-in;
+    }
+  }
+}
+
+.barber-foto {
+  display: block;
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+  }
+}
+
+.best-barber-foto {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    margin-right: 30px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    margin-right: 0;
+  }
+
+  & .beard {
+    width: 330px;
+    margin-bottom: 30px;
+    @extend %img-throw;
+
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    @media screen and (min-width: 1280px) {
+      width: 270px;
+      margin-right: 30px;
+      margin-bottom: 0;
+      border: none;
+      filter: none;
+
+      object-fit: cover;
+      object-position: 30%;
+    }
+  }
+
+  & .hair {
+    width: 330px;
+    @extend %img-throw;
+
+    @media screen and (min-width: 1280px) {
+      object-fit: cover;
+      object-position: 40%;
+      width: 270px;
+      margin-right: 64px;
+    }
+  }
+}

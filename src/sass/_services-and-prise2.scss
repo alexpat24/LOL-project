@@ -1,0 +1,234 @@
+.section-prise{
+    min-width: 480px;
+    min-height: 826px;
+
+@media screen and (min-width:768px){
+    min-width: 768px;
+    min-height: 858px;
+    
+}
+@media screen and (min-width:1280px){
+    min-width: 1280px;
+    min-height: 718px;
+    
+}
+}
+
+
+
+
+.container-prise{
+    display: block;   
+    padding: 84px 31px;  
+
+    background: url(../src/images/img_prise/barbershop-mobil.jpg) rgba(17, 19, 25, 0.85);
+   /* background: url(../images/barbershop-mobil.jpg) rgba(17, 19, 25, 0.85);*/
+      background-blend-mode: color-burn;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+
+
+
+@media screen and (min-width:768px){
+    .container-prise{
+    padding: 100px 39px;  
+    background:  url(../src/images/img_prise/barbershop-tablet.jpg) rgba(17, 19, 25, 0.85);
+    background-blend-mode: color-burn;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+     @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {          
+      background-image: rgba(17, 19, 25, 0.85) url(../src/images/img_prise/barbershop_tablet@2x.jpg);
+    background-blend-mode: color-burn;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+}
+}
+@media screen and (min-width:1280px){
+    .container-prise{
+    padding: 130px 55px;
+    background:  url(../src/images/img_prise/barbershop-comp.jpg) rgba(17, 19, 25, 0.85);
+    background-blend-mode: color-burn;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+     @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {        
+  background-image: rgba(17, 19, 25, 0.85) url(../src/images/img_prise/barbershop-comp@2x.jpg);
+    background-blend-mode: color-burn;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+}
+}
+
+
+
+
+
+
+
+
+
+
+.line-meta-prise{      
+ display: flex;
+ margin-bottom: 20px;
+}
+.prise-line{
+    
+    width: 60px;
+    height: 1px;
+
+   background: rgba(157, 164, 189, 0.6);
+    margin-right: 20px;
+    margin-top: 7px;
+}
+.block-prise{
+    display: inline-block;
+    list-style-type: none;
+    padding: 30px;
+   width: 100%;
+    margin-bottom: 50px;
+   
+   background-image:  linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+   
+@media screen and (max-width:479px){
+    max-width: 479px;
+}
+@media screen and (min-width:480px){
+    min-width: 480px;
+}
+@media screen and (min-width:1280px){
+       padding: 0px;  
+       background-image: none;
+       
+   }
+}
+
+.meta-prise{
+    font-family: Open Sans, sans-serif;
+    font-style: 400;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(157, 164, 189, 0.6);
+
+}
+
+
+.name-section-prise{
+    display: block;
+    height: 49px;
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.16;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    
+    margin-bottom: 44px;
+}
+.menu-services-prise{
+    min-width: 418px;
+}
+
+.item-prise{
+    display: flex;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2.14;
+    letter-spacing: 0.02em;
+    color: #9DA4BD;
+
+    margin-bottom: 20px;
+    margin-left: 0px;
+    align-items: baseline;
+ @media screen and (min-width:768px){
+    font-size: 18px;
+    line-height: 1.66;
+}
+}
+
+ 
+.services-prise-two .item-prise:last-child{
+    margin-bottom: 0px;
+
+}
+@media screen and (min-width:1280px){
+.services-prise-one .item-prise:last-child{
+    margin-bottom: 0px;
+}
+}
+
+
+.item-prise::before{
+    content: '';
+    border-bottom: 1px solid rgba(157, 164, 189, 0.12);
+    flex-grow: 1;
+    order: 2;
+    margin: 0px 6px;
+}
+
+.value{
+    order: 3;
+    
+}
+.button-prise{
+    display: block;
+     border: 2px solid #ff6c00;
+    border-radius: 25px;
+    padding: 12px 38px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    background-color: transparent;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.09em;
+    color: #FFFFFF;
+
+    cursor: url(../src/images/icons/finger.svg) pointer;
+&:hover{
+    background-color:#ff6c00 ;
+    outline: none;
+}
+}
+@media screen and (min-width:1280px){
+.block-prise{
+    display: flex;
+}
+}
+@media screen and (min-width:1280px){
+.services-prise-one{
+    width: 50%;
+    padding: 30px 40px;
+    background-image:  linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+}
+@media screen and (min-width:1280px){
+.services-prise-two{
+    width: 50%;
+   padding: 30px 40px;
+    background-image:  linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+}

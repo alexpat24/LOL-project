@@ -1,0 +1,147 @@
+.portfolio-conteiner {
+  padding: 0px;
+  @media screen and (max-width: 767px) {
+    margin: 84px 31px;
+  }
+  @media screen and (min-width: 768px) {
+    margin: 100px 39px;
+    
+  }
+  @media screen and (min-width: 1280px) {
+    margin: 130px 55px;
+  }
+}
+ul{
+  list-style: none;
+}
+.portfolio-ghost {
+  display: none;
+}
+.portfolio-title {
+  display: inline-flex;
+  
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-size: 11px;
+  line-height: 1.91;
+  
+  color: #303030;
+  height: 40px;
+  margin-bottom: 40px;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  @media screen and (min-width:768px){
+    line-height: 1.36;
+  }
+}
+
+
+.portfolio-title::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+   align-items: center;
+ 
+  background-color: #303030;
+  border-radius: 1px;
+  transform: translateY(10px);
+ 
+  margin-right: 20px;
+
+  
+}
+
+
+
+.portfolio-item {
+  display: block;
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @media screen and (max-width: 767px) {
+    max-width: 418px;
+    & :nth-last-child(n + 4) {
+      margin-bottom: 0px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width:1279px){
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: calc(100% / 2);
+    justify-content: center;
+    &:nth-last-child(-n+1){
+      margin-right: -30px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    display: flex;
+  
+    
+  }
+}
+
+.portfolio-list {
+ 
+  @media screen and (max-width: 767px){
+    max-width: 418px;
+    margin-left: auto;
+    margin-right: auto;
+    
+     &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  }
+  @media screen and (min-width: 768px)  {
+    display: flex;
+    flex-wrap: wrap;
+    width: 330px;
+    padding-right: 0px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    
+      &:nth-child(2n+2){
+        margin-right: 0px;
+      }
+     &:nth-last-child(-n+2){
+    margin-bottom: 0px;
+  }
+  }
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 270px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    &:nth-child(2n){
+        margin-right: 30px;
+      }
+      &:nth-last-child(-n+1){
+    margin-right: 0px;
+  }
+  }
+}
+
+
+.portfolio-image {
+  display: block;
+     width: 100%;
+     object-fit: cover;}
+ 
+
+.container-portfolio {
+ 
+   
+  @media screen and (min-width: 768px) and (max-width:1279px) {
+    width: 690px; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: 1280px)  {
+    width: calc(1280px - 110px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

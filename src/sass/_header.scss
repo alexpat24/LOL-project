@@ -1,0 +1,514 @@
+.position-container {
+  display: flex;
+}
+
+.header {
+  width: 80%;
+
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  background-color: rgba(25, 28, 38, 0.2);
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    height: 750px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-bottom: 245px;
+    height: 100vw;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 206px;
+    height: 52.6vw;
+  }
+}
+.sidebar {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 20%;
+  min-height: 680px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  & a {
+    display: block;
+    text-align: center;
+  }
+}
+.sidebar-logo__inner {
+  width: 69px;
+  height: 56px;
+}
+.sidebar-menu__social {
+  position: absolute;
+  bottom: 20%;
+  left: 44%;
+  transform-origin: left top;
+  transform: rotate(-90deg);
+  @extend %list-throw;
+  & a {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.35;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    color: $main-color;
+  }
+  @media screen and (min-width: 768px) {
+    display: inline-flex;
+  }
+}
+.sidebar-menu__instagram {
+  display: block;
+  position: relative;
+  margin-right: 40px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    width: 60px;
+    border: 1px solid black;
+  }
+  & a {
+    cursor: url('../../src/images/icons/finger.svg'), pointer;
+    transition: 0.3s ease-in;
+  }
+  & a:hover {
+    color: $hover-color;
+  }
+}
+.sidebar-menu__youtube {
+  & a {
+    cursor: url('../../src/images/icons/finger.svg'), pointer;
+    transition: 0.3s ease-in;
+  }
+  & a:hover {
+    color: $hover-color;
+  }
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  @extend %font-sans;
+  @media screen and (max-width: 479px) {
+    margin-bottom: 110px;
+  }
+  @media screen and (min-width: 480px) {
+    min-width: 480px;
+    margin-bottom: 115px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 609px;
+    margin-bottom: 156px;
+  }
+  @media screen and (max-width: 1279px) {
+    justify-content: space-between;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 100%;
+    margin-bottom: 204px;
+  }
+}
+.header-logo__inner {
+  width: 69px;
+  height: 56px;
+  fill: $white-color;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.burger-button {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  z-index: 201;
+  &:focus {
+    outline: none;
+  }
+  &.is-open .burger__menu {
+    transform: translateX(100%);
+  }
+  & .burger__close {
+    transition: 100ms ease-in;
+    transform: translateX(100%);
+  }
+  &.is-open .burger__close {
+    transform: translateX(0);
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.burger__icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+.burger__menu {
+  transition: 100ms ease-in;
+}
+.header-menu {
+  z-index: 200;
+  transition: transform 100ms ease-in;
+  &.is-open {
+    right: 0;
+    transform: translatex(0);
+    transition: transform 100ms ease-in;
+  }
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 0;
+    right: 999999999px;
+    height: 100%;
+    padding-bottom: 227px;
+    padding-top: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+    transform: translatex(100%);
+    background-color: $white-color;
+  }
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.header-menu__list {
+  @extend %list-throw;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 64px;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+.header-menu__item {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.38;
+  text-align: left;
+  letter-spacing: 0.1em;
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-right: 24px;
+      margin-bottom: 0;
+    }
+    font-size: 12px;
+    line-height: 1.14;
+    letter-spacing: 0.1em;
+  }
+}
+.header-menu__link {
+  text-align: left;
+  color: $main-color;
+  transition: color 0.3s ease-in;
+  cursor: url('../../src/images/icons/finger.svg'), pointer;
+  @extend %link-throw;
+  &:hover,
+  &:focus {
+    color: $hover-color;
+  }
+  @media screen and (min-width: 768px) {
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: $white-color;
+  }
+}
+.header-menu__contacts {
+  margin-bottom: 64px;
+  @extend %list-throw;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 1280px) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.header-menu__tel {
+  margin-bottom: 20px;
+  text-align: left;
+  @media screen and (min-width: 768px) {
+    order: 2;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  @media screen and (min-width: 1280px) {
+    order: 1;
+    margin-right: 40px;
+  }
+}
+.header-menu__phone {
+  text-decoration: none;
+  color: $main-color;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.38;
+  text-align: center;
+  letter-spacing: 0.1em;
+  transition: color $animation-duration;
+  cursor: url('../../src/images/icons/finger.svg'), pointer;
+  &:hover,
+  &:focus {
+    color: $hover-color;
+  }
+  @media screen and (min-width: 768px) {
+    color: $white-color;
+    font-size: 12px;
+    line-height: 1.14;
+    letter-spacing: 0.1em;
+  }
+  @media screen and (min-width: 1280px) {
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+.header-menu__button {
+  @media screen and (min-width: 768px) {
+    order: 1;
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    order: 2;
+    margin-bottom: 0;
+  }
+}
+.header-menu__click {
+  @extend %button-submit;
+  outline: none;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: $main-color;
+  transition: color $animation-duration, background-color $animation-duration;
+  cursor: url('../../src/images/icons/finger.svg'), pointer;
+  &:hover,
+  &:focus {
+    background-color: $hover-color;
+    color: $white-color;
+  }
+  @media screen and (min-width: 768px) {
+    color: $white-color;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+.header-menu__social {
+  @extend %list-throw;
+  & a {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.35;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    color: $main-color;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.header-menu__instagram {
+  display: block;
+  text-align: right;
+  position: relative;
+  margin-bottom: 24px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 60px;
+    border: 1px solid black;
+  }
+  & a {
+    transition: 0.3s ease-in;
+  }
+  & a:hover {
+    color: $hover-color;
+  }
+}
+.header-menu__youtube {
+  text-align: right;
+  & a {
+    transition: 0.3s ease-in;
+  }
+  & a:hover {
+    color: $hover-color;
+  }
+}
+.header-text-container {
+  @media screen and (max-width: 479px) {
+    padding-left: 15px;
+  }
+  @media screen and (min-width: 480px) {
+    padding-left: 31px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-left: 0;
+    display: inline-block;
+    text-align: center;
+  }
+  @media screen and (min-width: 1280px) {
+    text-align: left;
+    padding-left: 100px;
+  }
+}
+.header-paragraph {
+  position: relative;
+  @extend %text-throw;
+  text-align: left;
+  padding-left: 80px;
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.6);
+  &::before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 60px;
+    border: 1px solid rgba(157, 164, 189, 0.6);
+  }
+  @media screen and (max-width: 400px) {
+    text-align: left;
+    padding-left: 0;
+    &::before {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 550px) {
+    display: inline-block;
+    padding-left: 80px;
+    &::before {
+      left: 0;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+    padding-left: 90px;
+    &::before {
+      left: -20px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    &::before {
+      left: 0;
+    }
+    padding-left: 80px;
+  }
+}
+.header-title {
+  @extend %font-raleway;
+  @extend %text-throw;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+  color: $white-color;
+}
+.header-subtitle {
+  display: block;
+  width: 61%;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.02em;
+  color: $little-text-color;
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: 1280px) {
+    display: inline-block;
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+// SLIDER
+#fader {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+#fader img {
+  position: absolute;
+  display: block;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @media screen and (max-width: 479px) {
+    object-position: 75% 75%;
+  }
+  @media screen and (min-width: 480px) {
+    object-position: 75% 50%;
+  }
+  @media screen and (min-width: 768px) {
+    object-position: 75% center;
+  }
+  @media screen and (min-width: 1280px) {
+    object-position: unset;
+  }
+}
+.btn-arr {
+  cursor: url('../../src/images/icons/finger.svg'), pointer;
+  width: 60px;
+  height: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(157, 164, 189, 0.6);
+  color: rgba(157, 164, 189, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: $animation-duration;
+  &:hover {
+    color: $white-color;
+    border-color: $white-color;
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+.btn-prev {
+  position: absolute;
+  right: 163px;
+  bottom: 40px;
+}
+.btn-next {
+  position: absolute;
+  right: 50px;
+  bottom: 40px;
+}
