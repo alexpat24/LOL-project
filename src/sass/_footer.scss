@@ -333,6 +333,8 @@
   text-decoration: none;
 }
 .schedule {
+  margin-left: 80px;
+  position: relative;
   font-family: 'Open Sans', sans-serif;
   color: white;
   font-weight: 600;
@@ -340,6 +342,17 @@
   line-height: 1.36;
   display: flex;
   align-items: center;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 7px;
+    content: '';
+    width: 60px;
+    border: 1px solid rgba(157, 164, 189, 0.4);
+    color: rgba(157, 164, 189, 0.4);
+    transform: translateX(-80px);
+  }
 
   @media screen and (min-width: 1280px) {
     margin-bottom: 20px;
@@ -417,7 +430,7 @@
 .copyright-network {
   display: block;
   font-family: 'Open Sans', sans-serif;
-  cursor: url('/src/images/finger.svg'), pointer;
+  cursor: url('../../src/images/icons/finger.svg'), pointer;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -429,7 +442,7 @@
   display: flex;
   margin-right: 30px;
   align-items: center;
-  cursor: url('/src/images/finger.svg'), pointer;
+  cursor: url('../../src/images/icons/finger.svg'), pointer;
 }
 .line-copyright {
   content: '';
